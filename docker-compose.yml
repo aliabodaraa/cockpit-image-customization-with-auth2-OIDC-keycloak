@@ -1,0 +1,29 @@
+version: '3'
+services:
+ cockpit:
+    image: my-custom-cockpit
+    container_name: orchestracockpit
+    ports:
+      - 8089:80
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 2048M
+        reservations:
+          cpus: '0.3'
+          memory: 1024M
+    networks:
+      - orchestra_default
+
+volumes:
+  cockpit-volume:
+
+networks:
+  orchestra_default:
+    external: true
+
+#1.cd ./edit_htaccess
+#2. build the image "my-custom-cockpit" : docker build -t my-custom-cockpit
+#3. cd ..
+#4. docker compose up -d

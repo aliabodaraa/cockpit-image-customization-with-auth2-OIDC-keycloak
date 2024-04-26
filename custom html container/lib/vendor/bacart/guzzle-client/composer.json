@@ -1,0 +1,37 @@
+{
+    "name": "bacart/guzzle-client",
+    "description": "Bacart GuzzleHTTP client",
+    "type": "library",
+    "keywords": [
+        "php",
+        "common",
+        "bacart"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.1",
+        "bacart/common": "^0.1"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^0.10.3"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Bacart\\GuzzleClient\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alex Bacart",
+            "email": "alex@bacart.net"
+        }
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.2-dev"
+        }
+    }
+}
